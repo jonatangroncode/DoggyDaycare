@@ -1,27 +1,48 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
+import DogsCatalog from './Catalog';
+
+function DogDetailsPage(props) {
+
+  const [dogInfo, setDogInfo] = useState(null);
+
+  const { chipNumber } = useParams();
+  const location = useLocation();
+  const dogData = location.state.dog; // Access the passed dog data
 
 
+  const navigate = useNavigate();
 
-function DogDetailsPage() {
-  const { id } = useParams(); // hämta id från URL:en
+  useEffect(() => {
+    console.log('Inside useEffect'); 
 
-  // sök efter hunden med hjälp av id
-  const dog = dogs.find((dog) => dog.id === parseInt(id));
+    const selectedDog = props.dogsData.find((dog) => dog.chipNumber === chipNumber);
 
-  // om hunden inte hittas, returnera en meddelande
-  if (!dog) {
-    return <div>Hunden hittades inte.</div>;
-  }
+    console.log('Selected Dog:', selectedDog);
+    if (selectedDog) {
+      setDogInfo(selectedDog); 
+    }
+  }, [chipNumber, props.dogsData]);
 
-  // om hunden hittas, returnera hundens information
   return (
-    <div>
-      <h2>{dog.name}</h2>
-      <img src={dog.image} alt={dog.name} />
-      <p>{dog.description}</p>
-      <p>Ålder: {dog.age} år</p>
-      <p>Ras: {dog.breed}</p>
+    <div className="container">
+      {dogInfo ? (
+        <>
+          <h2>{dogInfo.name}</h2>
+          <img src={dogInfo.img} alt={dogInfo.name} />
+          <p>Sex: {dogInfo.sex}</p>
+          <p>Breed: {dogInfo.breed}</p>
+          <p>Age: {dogInfo.age}</p>
+          <p>Chip Number: {dogInfo.chipNumber}</p>
+          <div className="owner-info">
+            <p>Owner Name: {dogInfo.owner.name}</p>
+            <p>Owner Last Name: {dogInfo.owner.lastName}</p>
+            <p>Owner Phone Number: {dogInfo.owner.phoneNumber}</p>
+          </div>
+          <button className="back-button" onClick={() => navigate(-1)}>Go Back</button>        </>
+      ) : (
+        <div>No dog information available.</div>
+      )}
     </div>
   );
 }

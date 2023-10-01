@@ -1,21 +1,19 @@
 import React from "react";
-//import {FaSearch} from "react-icons/fa";
+import './welcomepage.css';
+import { Link } from "react-router-dom";
 
-
-export const SearchBar = () => {
-    return <div className="input-wrapper">
-        <input placeholder="Type to search"/>
-
-        </div>
-
-}
 
 export function WelcomePage() {
   return (
-    <div>
-      <h1>Välkommen till Doggy Daycare</h1>
+    <div className="container" >
+      <h1 className="h11">Välkommen till Doggy Daycare</h1>
       <p>Hos oss tar vi hand om din hund på bästa möjliga sätt. Vi erbjuder en trygg och rolig miljö där din hund kan leka och träffa nya vänner.</p>
       <p>Klicka på "Katalog" i navigationsmenyn för att se en lista över alla hundar som har besökt oss tidigare.</p>
+      <Link to="/Catalog">
+      <button className="knapp">
+        Catalog
+      </button>
+      </Link>
     </div>
   );
 }

@@ -1,0 +1,50 @@
+
+
+/* Keep the container centered and use flex layout for wrapping */
+.catalog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; /* Wrap items onto multiple lines */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .catalog-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Adjust margins and layout for each dog */
+  .catalog-dog {
+    margin: 10px; /* Add margin around each dog */
+    width: calc(33.33% - 20px); /* Divide width equally for three dogs with margin in between */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .catalog-dog img {
+    /* Remove width and height here, as it should be handled by the .catalog-dog */
+    width: 300px;
+    max-width: 100%; /* Let the image adjust to its container */
+    height: 300px; /* Maintain aspect ratio */
+    object-fit: cover;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .catalog-dog p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+
+  .catalog-container{
+
+  }
+  
