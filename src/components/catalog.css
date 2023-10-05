@@ -1,6 +1,6 @@
 
 
-/* Keep the container centered and use flex layout for wrapping */
+/* Keep the container centered and uses flex layout for wrapping */
 .catalog-container {
     max-width: 800px;
     margin: 0 auto;
@@ -9,6 +9,7 @@
     display: flex;
     flex-wrap: wrap; /* Wrap items onto multiple lines */
     justify-content: center; /* Center items horizontally */
+    
   }
   
   .catalog-title {
@@ -26,16 +27,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0.2, 0.2);
   }
   
   .catalog-dog img {
-    /* Remove width and height here, as it should be handled by the .catalog-dog */
     width: 300px;
-    max-width: 100%; /* Let the image adjust to its container */
-    height: 300px; /* Maintain aspect ratio */
+    max-width: 100%; /* Lets the image adjust to its container- fills it*/
+    height: 300px; 
     object-fit: cover;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-top: 0;
   }
   
   .catalog-dog p {
@@ -44,7 +46,7 @@
     margin-top: 10px;
   }
 
-  .catalog-container{
 
+  .catalog-container a:hover {
+    border: 3px solid green;
   }
-  

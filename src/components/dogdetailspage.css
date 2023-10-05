@@ -1,52 +1,71 @@
+/* styles.css */
 
-/* dogdetailspage.css */
-
-/* Container for the entire page */
+/* Container style */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Dog name heading */
-  h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  /* Dog image */
-  img {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-  
-  /* Dog information */
-  p {
-    font-size: 16px;
-    margin: 5px 0;
-  }
-  
-  /* Owner information */
-  .owner-info {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 3px solid #ccc;
-  }
-  
-  /* Button to go back */
-  .back-button {
-    margin-top: 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ccc;
+ 
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 10);
+  border: 3px solid green;
+}
+
+.designbg{
+  width: screen;
+  height: 500px;
+  background: linear-gradient(to right, #000080,#FFD700 );
+}
+
+.half{
+  width: screen;
+  height: 1000px;
+  background: linear-gradient(to right, #FFD700, #000080);
+}
+
+
+/* Dog name style */
+h2 {
+  font-size: 44px;
+  color: #333;
+}
+
+/* Dog image style */
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Dog information style */
+p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Owner information style */
+.owner-info {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Back button style */
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

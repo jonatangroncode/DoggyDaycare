@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
-import DogsCatalog from './Catalog';
+import './dogdetailspage.css';
 
 function DogDetailsPage(props) {
 
@@ -14,7 +14,7 @@ function DogDetailsPage(props) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('Inside useEffect'); 
+   
 
     const selectedDog = props.dogsData.find((dog) => dog.chipNumber === chipNumber);
 
@@ -25,6 +25,10 @@ function DogDetailsPage(props) {
   }, [chipNumber, props.dogsData]);
 
   return (
+  <div className='half'>
+    <div className='designbg'>
+
+   
     <div className="container">
       {dogInfo ? (
         <>
@@ -43,7 +47,12 @@ function DogDetailsPage(props) {
       ) : (
         <div>No dog information available.</div>
       )}
+    </div> 
+    
+
     </div>
+    </div>
+    
   );
 }
 

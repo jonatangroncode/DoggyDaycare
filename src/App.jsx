@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import NavigationMenu from "./components/NavigationMenu";
 import DogsCatalog from "./components/Catalog";
 import DogDetailsPage from "./components/DogDetailsPage";
 import "./App.css";
 import { WelcomePage } from "./components/Welcomepage";
+import Layout from "./components/Layout";
+
 
 function App() {
   const [dogsData, setDogsData] = useState([]);
@@ -32,16 +33,17 @@ function App() {
       .catch((error) => {
         console.error("Error fetching dog data:", error);
       });
-  }, []); // Använd en tom beroendelista för att köra useEffect en gång när komponenten monteras
+  }, []); 
 
   return (
     <div className="App">
+      <Layout/>
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/catalog" element={<DogsCatalog />} />
         <Route
-          path="/Detaljer/:chipNumber"
-          Component={(props) => <DogDetailsPage {...props} dogsData={dogsData} />}
+          path="/Detaljer/:chipNumber" //url med chipnummer för att göra den unik 
+          Component={(props) => <DogDetailsPage {...props} dogsData={dogsData} />} //skickar med hunddata
         />
       </Routes>
     </div>

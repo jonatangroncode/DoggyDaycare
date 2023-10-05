@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './catalog.css';
-import DogDetailsPage from './DogDetailsPage';
 
 
 function DogsCatalog() {
@@ -41,11 +40,6 @@ function DogsCatalog() {
 
   return (
     <div className='catalog-container'> 
-    <Link to="/">
-      <button className="knapp">
-        Home
-      </button>
-      </Link>
       <h1 className='catalog-title'>Här är vår katalog</h1>
      
       {dogs.map(dog => (
@@ -63,8 +57,3 @@ function DogsCatalog() {
 
 export default DogsCatalog;
 
-<Link to="/Catalog">
-<button className="knapp">
-  hej
-</button>
-</Link>
