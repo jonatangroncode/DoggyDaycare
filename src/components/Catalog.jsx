@@ -40,7 +40,7 @@ function DogsCatalog() {
 
   return (
     <div className='catalog-container'> 
-      <h1 className='catalog-title'>Här är vår katalog</h1>
+      <h1 className='catalog-title'>Here is our catalog</h1>
      
       {dogs.map(dog => (
         <div className='catalog-dog' key={dog.chipNumber}>

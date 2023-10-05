@@ -15,20 +15,15 @@ function Layout({ children }) {
         <ul className='cont'>
            
           <li className='second-object'>
-            <Link to="/">Hem</Link>
+            <Link to="/">Home</Link>
           </li>
           <li className='third-object'>
-            <Link to="/catalog">Katalog</Link>
+            <Link to="/catalog">Catalog</Link>
           </li>
        
         </ul>
       </div>
-      <header>
-        
-      </header>
-      <main>
-        {children}
-      </main>
+    
      
     </div>
   );

@@ -8,9 +8,9 @@ export function WelcomePage() {
     <div className="containerframe">
        <Link to="/catalog">
     <div className="container" >
-      <h1 className="h11">Välkommen till Doggy Daycare</h1>
-      <p>Hos oss tar vi hand om din hund på bästa möjliga sätt. Vi erbjuder en trygg och rolig miljö där din hund kan leka och träffa nya vänner.</p>
-      <p>Klicka på "Katalog" i navigationsmenyn för att se en lista över alla hundar som har besökt oss tidigare.</p>
+      <h1 className="h11">Welcome to Doggy Daycare</h1>
+      <p>We take care of your dog in the best possible way. We offer a safe and fun environment where your dog can play and meet new friends.</p>
+      <p>Click on "Catalog" in the navigation menu to see a list of all the dogs that have visited us before.</p>
      
     </div>
     </Link>

@@ -55,3 +55,19 @@
     width: 100px;
   }
 
+  @media (max-width: 900px) {
+    .containerframe  {
+       width: auto;
+       margin-top: 10px;
+       height: 600px;
+      
+    }
+  }
+
+  @media (max-width: 900px) {
+    .containerframe .container  {
+       width: auto;
+       height: 500px;
+      
+    }
+  }

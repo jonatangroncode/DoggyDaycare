@@ -4,11 +4,13 @@
 .catalog-container {
     max-width: 800px;
     margin: 0 auto;
+    margin-top: 20px;
     padding: 20px;
     text-align: center;
     display: flex;
     flex-wrap: wrap; /* Wrap items onto multiple lines */
     justify-content: center; /* Center items horizontally */
+    background-color: lightgray;
     
   }
   
@@ -49,4 +51,16 @@
 
   .catalog-container a:hover {
     border: 3px solid green;
+  }
+
+  @media (max-width: 750px) {
+    .catalog-dog  {
+      width: calc(50% - 20px);
+    }
+  }
+
+  @media (max-width: 510px) {
+    .catalog-dog  {
+      width: calc(100% - 20px);
+    }
   }
